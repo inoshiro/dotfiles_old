@@ -1,6 +1,8 @@
 set number
 set list
+set listchars=tab:>-,eol:$
 set autoindent
+set smartindent
 set backspace=indent,eol,start
 set incsearch
 set ignorecase
@@ -8,15 +10,27 @@ set wildmenu
 
 syntax on
 set t_Co=256
-colorscheme wombat256
+set background=dark
+
+" status line
+set laststatus=2
 
 " General keymap
 let mapleader = ";"
 
 " Plugins
 " -------------------
-" Pathogen
-call pathogen#runtime_append_all_bundles()
+
+""" Vundle '''
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+filetype plugin on
+
+Bundle "altercation/vim-colors-solarized"
+Bundle "Lokaltog/vim-powerline"
+
+"let g:solarized_termcolors=256
+colorscheme solarized
 
 " unite
 nnoremap <silent> <C-r>  :<C-u>Unite file_mru<CR>
