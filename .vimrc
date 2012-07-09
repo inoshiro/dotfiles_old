@@ -3,6 +3,9 @@ set list
 set listchars=tab:>-,eol:$
 set autoindent
 set smartindent
+set tabstop=4 
+set shiftwidth=4
+set softtabstop=4
 set backspace=indent,eol,start
 set incsearch
 set ignorecase
@@ -28,8 +31,9 @@ filetype plugin on
 
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
+Bundle "vim-scripts/mako.vim"
 
-"let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " unite
