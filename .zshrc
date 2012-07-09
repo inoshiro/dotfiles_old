@@ -37,7 +37,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias ve='virtualenv --no-site-packages --distribute'
 alias mkve='mkvirtualenv --no-site-packages --distribute'
 
-alias ls='ls -G'
+#alias ls='ls -G'
+alias ls='ls --color'
 alias ll='ls -la'
 
 alias scls='screen -ls'
