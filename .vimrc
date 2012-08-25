@@ -25,16 +25,37 @@ let mapleader = ";"
 " Plugins
 " -------------------
 
-""" Vundle '''
-set rtp+=~/.vim/vundle/
-call vundle#rc()
-filetype plugin on
+""" neobundle
+set nocompatible               " Be iMproved
+filetype off                   " Required!
 
-Bundle "altercation/vim-colors-solarized"
-Bundle "Lokaltog/vim-powerline"
-Bundle "vim-scripts/mako.vim"
-Bundle "Shougo/unite.vim"
-Bundle "Shougo/neocomplcache"
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundle "altercation/vim-colors-solarized"
+NeoBundle "Lokaltog/vim-powerline"
+NeoBundle "vim-scripts/mako.vim"
+NeoBundle "Shougo/unite.vim"
+NeoBundle "Shougo/neocomplcache"
+NeoBundle "https://bitbucket.org/shellholic/vim-creole"
+
+filetype plugin indent on     " Required!
+"
+" Brief help
+" :NeoBundleList          - list configured bundles
+" :NeoBundleInstall(!)    - install(update) bundles
+" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
 
 let g:solarized_termcolors=256
 colorscheme solarized
