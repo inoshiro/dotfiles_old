@@ -10,6 +10,7 @@ set backspace=indent,eol,start
 set incsearch
 set ignorecase
 set wildmenu
+set hlsearch
 
 syntax on
 set t_Co=256
@@ -32,6 +33,8 @@ filetype plugin on
 Bundle "altercation/vim-colors-solarized"
 Bundle "Lokaltog/vim-powerline"
 Bundle "vim-scripts/mako.vim"
+Bundle "Shougo/unite.vim"
+Bundle "Shougo/neocomplcache"
 
 let g:solarized_termcolors=256
 colorscheme solarized
