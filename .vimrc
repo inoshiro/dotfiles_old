@@ -38,9 +38,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundle "altercation/vim-colors-solarized"
 NeoBundle "Lokaltog/vim-powerline"
 NeoBundle "vim-scripts/mako.vim"
+NeoBundle "vim-scripts/minibufexpl.vim"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/neocomplcache"
-NeoBundle "https://bitbucket.org/shellholic/vim-creole"
 
 filetype plugin indent on     " Required!
 "
