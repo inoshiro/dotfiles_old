@@ -44,14 +44,3 @@ alias ll='ls -la'
 alias scls='screen -ls'
 alias scname='screen -S'
 alias scres='screen -r'
-
-# sakura internet
-USER_SAKURA=a-space-odyssey
-HOST_SAKURA=$USER_SAKURA.sakura.ne.jp
-alias ssh2sakura="ssh $USER_SAKURA@$HOST_SAKURA"
-alias ssh2sun="ssh kenjiro@192.168.1.250"
-function scp2sakura() {
-        local -a files; files="${1}"
-        local -a destDir; destDir="${2}"
-        scp -r ${files} $USER_SAKURA@$HOST_SAKURA:${destDir}
-}
